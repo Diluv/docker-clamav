@@ -1,9 +1,8 @@
 FROM alpine:3.11
 
-RUN apk add --no-cache clamav clamav-libunrar wget
+ENV CLAM_VERSION=0.102.2-r0
 
-RUN mkdir /data && \
-    chown -R clamav:clamav /data/
+RUN apk add --no-cache clamav=$CLAM_VERSION clamav-libunrar=$CLAM_VERSION
 
 COPY conf /etc/clamav
 COPY run.sh /run.sh
