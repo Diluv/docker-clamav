@@ -19,10 +19,10 @@ COPY run.sh /run.sh
 COPY health.sh /health.sh
 COPY conf/ /etc/clamav/
 
+RUN freshclam
+
 VOLUME /data/
 VOLUME /var/log/clamav/
-
-RUN freshclam
 
 CMD ["/run.sh"]
 
