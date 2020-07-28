@@ -12,12 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Generate build number
-        id: buildnumber
-        uses: einaregilsson/build-number@v1
-        with:
-          token: ${{secrets.github_token}}
-
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
