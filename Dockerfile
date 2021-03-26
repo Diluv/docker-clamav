@@ -1,4 +1,4 @@
-FROM alpine:3.13.2
+FROM alpine:3.13.3
 
 ARG CLAM_VERSION=0.103.1-r0
 ARG UNAME=clamav
